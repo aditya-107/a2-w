@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WalletActivity">
+
+  <androidx.core.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:fillViewport="true"
+      >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <TextView
+          android:id="@+id/txt_intro"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="50dp"
+          android:gravity="center"
+          android:text="@string/instructions"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <TextView
+          android:id="@+id/txt_coins"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="36dp"
+          android:gravity="center"
+          android:text="Coins 0"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/txt_intro" />
+
+      <Button
+          android:id="@+id/btn_die"
+          android:layout_width="200dp"
+          android:layout_height="200dp"
+          android:layout_marginTop="44dp"
+          android:background="@color/purple_500"
+          android:gravity="center"
+          android:padding="0dp"
+          android:text="0"
+          android:textColor="@android:color/holo_blue_bright"
+          android:textSize="150dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/txt_coins" />
+
+      <TextView
+          android:id="@+id/txt_prev_roll"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="52dp"
+          android:text="Previous roll \t 0"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/btn_die" />
+
+      <TextView
+          android:id="@+id/txt_single_sixes"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="28dp"
+          android:layout_marginTop="48dp"
+          android:text="Sixes Rolled \t 0"
+          app:layout_constraintEnd_toStartOf="@+id/txt_tot_rolls"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/txt_prev_roll" />
+
+      <TextView
+          android:id="@+id/txt_tot_rolls"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="28dp"
+          android:text="Total Dice Rolls\t 0"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toEndOf="@+id/txt_single_sixes"
+          app:layout_constraintTop_toTopOf="@+id/txt_single_sixes" />
+
+      <TextView
+          android:id="@+id/txt_double_others"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="28dp"
+          android:layout_marginEnd="28dp"
+          android:text="Double Others \t 0"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toEndOf="@+id/txt_double_sixes"
+          app:layout_constraintTop_toBottomOf="@+id/txt_tot_rolls" />
+
+      <TextView
+          android:id="@+id/txt_double_sixes"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="28dp"
+          android:layout_marginTop="28dp"
+          android:text="Double Sixes \t 0"
+          app:layout_constraintEnd_toStartOf="@+id/txt_double_others"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/txt_single_sixes" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
