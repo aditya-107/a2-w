@@ -27,31 +27,27 @@ public class WalletViewModel extends ViewModel {
     previousRoll = currentRoll;
     currentRoll = dice.value();
 
-    if( previousRoll == 0){
-      if( currentRoll == 6){
+    if (previousRoll == 0) {
+      if (currentRoll == 6) {
         singleSixesCount++;
         coinBalance = 5;
       }
-    }
-    else{
-      if( previousRoll == 6){
-        if( currentRoll == 6){
+    } else {
+      if (previousRoll == 6) {
+        if (currentRoll == 6) {
           singleSixesCount++;
           consecutiveSixesCount++;
-          coinBalance += 10;
+          coinBalance += 15; // Updated from 10 to 15
         }
-      }
-      else{
-        if( currentRoll == 6){
+      } else {
+        if (currentRoll == 6) {
           singleSixesCount++;
           coinBalance += 5;
-        }
-        else{
-          if(currentRoll==previousRoll){
+        } else {
+          if (currentRoll == previousRoll) {
             consecutiveOtherRollsCount++;
             coinBalance += -5;
           }
-
         }
       }
     }
